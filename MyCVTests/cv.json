@@ -1,0 +1,112 @@
+{
+   "profile":{
+      "name":"Leming Deng",
+      "phone":"(647)408-4232",
+      "email":"leming.deng@gmail.com"
+   },
+   "summary":[
+      "10+ years experience in enterprise level software development",
+      "Master of Applied Science in Computer Engineering",
+      "Strong software programming skills",
+      "Good communication skills and teamwork",
+      "Proven research, analytical and problem-solving skills in software development",
+      "Willingness to learn and meet the demands of new experiences (quick learner)"
+   ],
+   "strength":{
+      "knowledge":[
+         "Swift",
+         "Objective-C",
+         "C++",
+         "Java",
+         "Python"
+      ],
+      "technical":[
+         "Reusability",
+         "Agile",
+         "Git flow",
+         "Middleware/Framework",
+         "TDD"
+      ]
+   },
+   "experience":[
+      {
+         "company":"Clearbridge Mobile",
+         "logo":"https://media.licdn.com/dms/image/C4D0BAQE8dEArV0wnQA/company-logo_200_200/0?e=2159024400&v=beta&t=7bKCSgaqN0n0EqM-FlOFhcG_0-X1nUOdS6y0WXqJ4n0",
+         "startDate":"2018-09-01",
+         "endDate":"2019-06-01",
+         "title":"Senior iOS Consultant",
+         "detail": "Leading development of Dynacare App and MBNA Apple Pay project",
+         "keys":[
+            "Swift",
+            "Reusability",
+            "Agile",
+            "Git flow",
+            "TDD"
+         ]
+      },
+      {
+         "company":"Bell Media",
+         "logo":"https://cartt.ca/sites/default/files/field/image/Bell%20Media_3_0.png",
+         "startDate":"2018-09-01",
+         "endDate":"2019-02-01",
+         "title":"Senior iOS Consultant",
+         "detail": "Development of the Crave iOS app and tvOS app",
+         "keys":[
+            "Swift",
+            "Objective-C",
+            "Reusability",
+            "Agile",
+            "Git flow",
+            "TDD"
+         ]
+      },
+      {
+         "company":"RBC",
+         "logo":"https://badlink.png",
+         "startDate":"2016-02-01",
+         "endDate":"2018-09-01",
+         "title":"Senior iOS Developer",
+         "detail": "Lead development of internal iPad app from scratch (universal design, size class, autolayout, unit test, continuous integration)\nLead development of WatchOS2 app (watchOS2, geolocation)\nLead development of first Swift project, part of the Mobile Banking App used by millions of users (push notification, salesforce)\nLead development of many POC projects for Mobile Banking App (push notification, security, AI)",
+         "keys":[
+            "Swift",
+            "Objective-C",
+            "Reusability",
+            "Agile",
+            "Git flow",
+            "TDD",
+            "Middleware/Framework"
+         ]
+      },
+      {
+         "company":"Quickplay",
+         "logo":"https://media.glassdoor.com/sql/302115/quickplay-squarelogo-1508265173899.png",
+         "startDate":"2014-08-01",
+         "endDate":"2016-02-01",
+         "title":"Senior iOS Engineer",
+         "detail": "Refactor major media player iOS Applications used by millions of users, greatly increase the stability, decrease maintenance costs\nModularization of core iOS company framework.",
+         "keys":[
+            "Objective-C",
+            "Reusability",
+            "Agile",
+            "Git flow",
+            "TDD",
+            "Middleware/Framework"
+         ]
+      },
+      {
+         "company":"Asigra Inc",
+         "logo":"https://media.glassdoor.com/sql/150547/asigra-squarelogo.png",
+         "startDate":"2011-08-01",
+         "endDate":"2014-07-01",
+         "title":"Mobile Software Developer",
+         "detail": "Development of Asigra Cloud Backup iOS app and Android app",
+         "keys":[
+            "Objective-C",
+            "C++",
+            "Java",
+            "Python",
+            "Agile"
+         ]
+      }
+   ]
+}
