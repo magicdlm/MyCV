@@ -34,6 +34,11 @@ class MasterViewController: UIViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        viewModel.handleUpdate = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
         loadData()
     }
 
@@ -45,7 +50,7 @@ class MasterViewController: UIViewController {
                 self?.title = profile.name
                 self?.profile = profile
                 self?.navigationItem.rightBarButtonItem?.isEnabled = true
-                self?.tableView.reloadData()
+                self?.navigationItem.leftBarButtonItem?.isEnabled = true
             }
             }, fail: { [weak self] (error) in
                 DispatchQueue.main.async {
@@ -68,7 +73,7 @@ class MasterViewController: UIViewController {
 
     // MARK: - Segues
     private enum Segue: String {
-        case showDetail, showProfile
+        case showDetail, showProfile, showSearch
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -86,6 +91,10 @@ class MasterViewController: UIViewController {
         case .showProfile:
             let vc = segue.destination as! ProfileViewController
             vc.model = profile
+            
+        case .showSearch:
+            let vc = segue.destination as! SearchViewController
+            vc.viewModel = viewModel
         }
     }
     

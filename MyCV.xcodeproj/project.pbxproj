@@ -12,6 +12,10 @@
 		3008FCFE22BD4F9C00FA66FE /* cv.json in Resources */ = {isa = PBXBuildFile; fileRef = 3008FCFD22BD4F9C00FA66FE /* cv.json */; };
 		3008FD0022BD50B600FA66FE /* MasterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3008FCFF22BD50B600FA66FE /* MasterViewModelTests.swift */; };
 		3008FD0222BD541B00FA66FE /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3008FD0122BD541B00FA66FE /* JsonLoader.swift */; };
+		3008FD0422BE909800FA66FE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3008FD0322BE909800FA66FE /* SearchViewController.swift */; };
+		3008FD0622BE95C900FA66FE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3008FD0522BE95C800FA66FE /* SearchViewModel.swift */; };
+		3026F30622BECA4200F38131 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3026F30422BECA4200F38131 /* SearchCell.swift */; };
+		3026F30722BECA4200F38131 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3026F30522BECA4200F38131 /* SearchCell.xib */; };
 		3051B39222BC4EF6006B4C77 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3051B39122BC4EF5006B4C77 /* DateFormatterExtension.swift */; };
 		3051B39522BC637D006B4C77 /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3051B39322BC637C006B4C77 /* ExperienceTableViewCell.swift */; };
 		3051B39622BC637D006B4C77 /* ExperienceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3051B39422BC637D006B4C77 /* ExperienceTableViewCell.xib */; };
@@ -44,6 +48,10 @@
 		3008FCFD22BD4F9C00FA66FE /* cv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cv.json; sourceTree = "<group>"; };
 		3008FCFF22BD50B600FA66FE /* MasterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewModelTests.swift; sourceTree = "<group>"; };
 		3008FD0122BD541B00FA66FE /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
+		3008FD0322BE909800FA66FE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		3008FD0522BE95C800FA66FE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		3026F30422BECA4200F38131 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		3026F30522BECA4200F38131 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 		3051B39122BC4EF5006B4C77 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		3051B39322BC637C006B4C77 /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
 		3051B39422BC637D006B4C77 /* ExperienceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExperienceTableViewCell.xib; sourceTree = "<group>"; };
@@ -155,6 +163,9 @@
 				30FB9DA122BC12910012E69E /* ProfileViewController.swift */,
 				3051B39322BC637C006B4C77 /* ExperienceTableViewCell.swift */,
 				3051B39422BC637D006B4C77 /* ExperienceTableViewCell.xib */,
+				3008FD0322BE909800FA66FE /* SearchViewController.swift */,
+				3026F30422BECA4200F38131 /* SearchCell.swift */,
+				3026F30522BECA4200F38131 /* SearchCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				30FB9D9B22BC01780012E69E /* MasterViewModel.swift */,
+				3008FD0522BE95C800FA66FE /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -248,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3026F30722BECA4200F38131 /* SearchCell.xib in Resources */,
 				309C357522BBDAC500309B79 /* LaunchScreen.storyboard in Resources */,
 				309C357222BBDAC500309B79 /* Assets.xcassets in Resources */,
 				3051B39622BC637D006B4C77 /* ExperienceTableViewCell.xib in Resources */,
@@ -273,9 +286,12 @@
 				309C358F22BBDFD000309B79 /* Model.swift in Sources */,
 				309C356D22BBDAC000309B79 /* DetailViewController.swift in Sources */,
 				3051B39222BC4EF6006B4C77 /* DateFormatterExtension.swift in Sources */,
+				3026F30622BECA4200F38131 /* SearchCell.swift in Sources */,
 				309C356B22BBDAC000309B79 /* MasterViewController.swift in Sources */,
 				309C356922BBDAC000309B79 /* AppDelegate.swift in Sources */,
+				3008FD0622BE95C900FA66FE /* SearchViewModel.swift in Sources */,
 				30FB9DA022BC0A360012E69E /* UIViewControllerExtension.swift in Sources */,
+				3008FD0422BE909800FA66FE /* SearchViewController.swift in Sources */,
 				3051B39522BC637D006B4C77 /* ExperienceTableViewCell.swift in Sources */,
 				30FB9D9C22BC01790012E69E /* MasterViewModel.swift in Sources */,
 				30FB9DA322BC12910012E69E /* ProfileViewController.swift in Sources */,

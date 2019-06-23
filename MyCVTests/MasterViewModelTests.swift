@@ -40,5 +40,12 @@ class MasterViewModelTests: XCTestCase {
             
         }, fail: { (_) in})
     }
+    
+    func testThatItCanFilterSwiftExperience() {
+        service.shouldFail = false
+        viewModel.fetchData(success: { _ in}, fail: { (_) in})
+        viewModel.filters = ["Swift"]
+        XCTAssertEqual(viewModel.sections[1].itemNumber, 3)
+    }
 
 }

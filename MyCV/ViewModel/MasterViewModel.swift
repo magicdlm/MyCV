@@ -9,6 +9,14 @@
 import Foundation
 
 final class MasterViewModel {
+    
+    var filters: Set<String> = [] {
+        didSet {
+            handleUpdate?()
+        }
+    }
+    var handleUpdate: (() -> Void)?
+    
     private let service: CVService
     private var model: Resume?
     
@@ -38,7 +46,7 @@ final class MasterViewModel {
     var sections: [Section] {
         guard let resume = model else { return [] }
         return [.summary(resume.summary),
-                .experience(resume.experience)]
+                .experience(resume.experience.filter({ !self.filters.isDisjoint(with: $0.keys) }))]
     }
     
     init(service: CVService = GithubService()) {
@@ -48,8 +56,16 @@ final class MasterViewModel {
     func fetchData(success: @escaping (Profile) -> Void, fail: @escaping (Error) -> Void) {
         service.getCV(success: { (resume) in
             self.model = resume
+            self.filters = Set(self.candidates)
             success(resume.profile)
         }, fail: fail)
+    }
+}
+
+extension MasterViewModel: SearchViewModel {
+    var candidates: [String] {
+        guard let model = model else { return [] }
+        return model.strength.knowledge + model.strength.technical
     }
 }
 
