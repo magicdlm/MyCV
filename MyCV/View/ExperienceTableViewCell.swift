@@ -32,7 +32,8 @@ class ExperienceTableViewCell: UITableViewCell {
             company.text = experience.company
             period.text = experience.period
             title.text = experience.title
-            if let url = experience.logo {
+            if let url = experience.logo,
+                logo.image == nil {
                 cancelable = URLSession.shared.dataTaskPublisher(for: url)
                     .compactMap { (data, _) in
                     UIImage(data: data)
