@@ -13,7 +13,7 @@ final class SearchCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            title.textColor = isSelected ? .black : .gray
+            title.textColor = isSelected ? .label : .secondaryLabel
             layer.borderColor = title.textColor.cgColor
         }
     }

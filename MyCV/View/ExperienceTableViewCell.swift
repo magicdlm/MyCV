@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Combine
 
 class ExperienceTableViewCell: UITableViewCell {
     @IBOutlet weak var logo: UIImageView!
@@ -32,22 +33,19 @@ class ExperienceTableViewCell: UITableViewCell {
             period.text = experience.period
             title.text = experience.title
             if let url = experience.logo {
-                downloadTask = URLSession.shared.dataTask(with: url) { (data, _, _) in
-                    guard let data = data,
-                        let image = UIImage(data: data) else { return }
-                    DispatchQueue.main.async {
-                        self.logo.image = image
-                    }
-                }
-                downloadTask?.resume()
+                cancelable = URLSession.shared.dataTaskPublisher(for: url)
+                    .compactMap { (data, _) in
+                    UIImage(data: data)
+                    }.replaceError(with: #imageLiteral(resourceName: "noImage"))
+                    .receive(on: RunLoop.main).assign(to: \.image, on: self.logo)
             }
         }
     }
     
-    private var downloadTask: URLSessionDataTask?
+    private var cancelable: Cancellable?
     
     override func prepareForReuse() {
-        downloadTask?.cancel()
+        cancelable?.cancel()
         logo.image = nil
         super.prepareForReuse()
     }
